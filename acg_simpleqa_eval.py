@@ -188,16 +188,27 @@ class ACGSimpleQAEval:
         last_error = ''
         for attempt in range(3):
             try:
-                response = self.sampler_client.chat.completions.create(
-                    model=self.sampler_model,
-                    messages=[
-                        {'role': 'system', 'content': CHINESE_SYSTEM_PROMPT},
-                        {'role': 'user', 'content': question},
-                    ],
-                    temperature=0.0,
-                    max_tokens=512,
-                    extra_body={'thinking': {'type': 'disabled'}, 'reasoning': {'enable': False}},
-                )
+                if 'deepseek' in self.sampler_model.lower():
+                    response = self.sampler_client.chat.completions.create(
+                        model=self.sampler_model,
+                        messages=[
+                            {'role': 'system', 'content': CHINESE_SYSTEM_PROMPT},
+                            {'role': 'user', 'content': question},
+                        ],
+                        temperature=0.0,
+                        max_tokens=512,
+                        extra_body={'thinking': {'type': 'disabled'}},
+                    )
+                else:
+                    response = self.sampler_client.chat.completions.create(
+                        model=self.sampler_model,
+                        messages=[
+                            {'role': 'system', 'content': CHINESE_SYSTEM_PROMPT},
+                            {'role': 'user', 'content': question},
+                        ],
+                        temperature=0.0,
+                        max_tokens=512,
+                    )
                 content = response.choices[0].message.content
                 return content.strip() if content else ''
             except Exception as e:
