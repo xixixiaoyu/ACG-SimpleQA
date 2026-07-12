@@ -38,9 +38,9 @@ python3 eval_cli.py opencode-go/qwen3.7-max
 
 ### 300 题精选
 
-| 模型 | 文件 |
-|---|---|
-| Kimi K2.6 | `results_300_kimi-k2.6.json` |
-| Qwen 3.7 Max | `results_300_qwen3.7-max.json` |
-| DeepSeek V4 Pro | `results_300_dsv4pro.json` |
-| GLM 5.1 | `results_300_glm51.json` |
+| 模型 | 正确率 | 文件 |
+|---|---|---|
+| DeepSeek V4 Pro | 57.0% | `results_300_dsv4pro.json` |
+| Kimi K2.6 | 51.3% | `results_300_kimi-k2.6.json` |
+| Qwen 3.7 Max | 45.0% | `results_300_qwen3.7-max.json` |
+| GLM 5.1 | 30.0% | `results_300_glm51.json` |
