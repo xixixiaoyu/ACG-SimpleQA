@@ -33,8 +33,8 @@ python3 eval_cli.py opencode-go/qwen3.7-max
 | 模型 | 正确率 | 文件 |
 |---|---|---|
 | DeepSeek V4 Pro | 27.2% | `results_dsv4pro_500.json` |
-| Gemini 3 Flash (preview) | 39.0% | `results_gemini3flash.json` |
-| Gemini 3.5 Flash | 41.2% | `results_gemini35flash.json` |
+| Gemini 3 Flash (preview) | 39.0% | `results_gemini3flash_500.json` |
+| Gemini 3.5 Flash | 41.2% | `results_gemini35flash_500.json` |
 
 ### 300 题精选
 
