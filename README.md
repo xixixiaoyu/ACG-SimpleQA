@@ -4,7 +4,7 @@
 
 ## 数据
 
-- `acg_simpleqa.jsonl` — 全量题库（约 4000+ 条）
+- `acg_simpleqa.jsonl` — 全量题库（4,234 条）
 - `selected_300_clean.jsonl` — 精选 300 题（清洗版）
 
 ## 评测方式
@@ -28,7 +28,7 @@ python3 eval_cli.py opencode-go/qwen3.7-max
 
 ## 评测结果
 
-### 500 题全量
+### 500 题精选
 
 | 模型 | 正确率 | 文件 |
 |---|---|---|
